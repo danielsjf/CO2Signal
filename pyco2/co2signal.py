@@ -39,7 +39,7 @@ def get_latest(token, country_code = None, latitude = None, longitude = None):
 
     return latest_data
 
-def get_lastest_carbon_intensity(token, country_code = None, latitude = None, longitude = None):
+def get_latest_carbon_intensity(token, country_code = None, latitude = None, longitude = None):
     """Get latest carbon intensity.
     :param token: the token as received from co2signal.com.
     :param country_code: (optional) the country code of the country (either the country code or both coordinates should
