@@ -14,6 +14,9 @@ def get_latest_carbon_intensity(token, country_code = None, latitude = None, lon
 
     latest_data = get_latest(token, country_code, latitude, longitude)
 
+    if 'carbonIntensity' not in latest_data['data'].keys():
+        raise ValueError("This location currently does not provide a carbon intensity. Please check electricitymap.org for further information.")
+
     latest_carbon_intensity = latest_data['data']['carbonIntensity']
 
     return latest_carbon_intensity
