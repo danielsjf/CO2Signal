@@ -38,4 +38,8 @@ def get_latest(token, country_code = None, latitude = None, longitude = None):
     if latest_data is None:
         raise ValueError("No inputs defined")
 
+    if 'message' in latest_data.keys():
+        if latest_data['message'] == "API rate limit exceeded":
+            raise ValueError("API rate limit exceeded.")
+
     return latest_data
