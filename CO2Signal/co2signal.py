@@ -31,7 +31,7 @@ def get_latest(token, country_code = None, latitude = None, longitude = None):
     if (latitude is not None) & (longitude is not None):
         latest_data = (requests
                            .get(API_ENDPOINTS["latest_coordinates"]
-                                .format(longitude = longitude, latitude = latitude),
+                                .format(longitude = str(longitude), latitude = str(latitude)),
                                 headers = header)
                            .json())
 
