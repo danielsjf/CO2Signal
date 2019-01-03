@@ -24,3 +24,8 @@ $RECYCLE.BIN/
 *.xml
 *.iml
 *.pyc
+
+# Folders
+build/*
+dist/*
+dist_old/*
